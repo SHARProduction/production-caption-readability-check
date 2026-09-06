@@ -1,0 +1,9 @@
+{
+  "name": "@sharproduction/production-caption-readability-check",
+  "version": "1.0.0",
+  "description": "Check subtitle cue reading speed for production delivery.",
+  "type": "module",
+  "bin": { "production-caption-readability-check": "cli.mjs" },
+  "scripts": { "test": "node --test" },
+  "license": "MIT"
+}
