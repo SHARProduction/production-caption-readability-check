@@ -1,0 +1,28 @@
+name: Publish JSR package
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'cli.mjs'
+      - 'cli.d.ts'
+      - 'jsr.json'
+      - 'LICENSE'
+      - 'README.md'
+      - '.github/workflows/publish-jsr.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm test
+      - run: npx jsr publish
