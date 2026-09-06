@@ -1,0 +1,8 @@
+{
+  "name": "@sharproduction/production-caption-readability-check",
+  "version": "1.0.0",
+  "exports": "./cli.mjs",
+  "license": "MIT",
+  "homepage": "https://sharprod.com/",
+  "description": "SHAR Production CLI for subtitle-cue reading-speed validation before delivery."
+}
